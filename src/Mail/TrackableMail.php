@@ -1,6 +1,6 @@
 <?php
 
-namespace HenryAvila\EmailTracking\Mail;
+namespace HenryAvila\LaravelNovaEmailTracking\Mail;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;

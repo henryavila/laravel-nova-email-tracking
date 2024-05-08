@@ -1,6 +1,6 @@
 <?php
 
-use HenryAvila\EmailTracking\Controllers\MailgunWebhookController;
+use HenryAvila\LaravelNovaEmailTracking\Controllers\MailgunWebhookController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('webhooks')->group(function () {

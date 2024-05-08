@@ -1,6 +1,6 @@
 <?php
 
-namespace HenryAvila\EmailTracking\Middleware\Webhooks;
+namespace HenryAvila\LaravelNovaEmailTracking\Middleware\Webhooks;
 
 use Closure;
 use Illuminate\Http\Request;

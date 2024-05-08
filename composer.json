@@ -1,12 +1,13 @@
 {
-    "name": "henryavila/email-tracking",
+    "name": "henryavila/laravel-nova-email-tracking",
     "description": "Track e-mail delivery with Mailgun Hooks and display the report on Laravel Nova Dashboard",
     "keywords": [
         "henryavila",
         "laravel",
-        "email-tracking"
+        "email-tracking",
+        "Laravel Nova"
     ],
-    "homepage": "https://github.com/henryavila/email-tracking",
+    "homepage": "https://github.com/henryavila/laravel-nova-email-tracking",
     "license": "MIT",
     "authors": [
         {
@@ -40,8 +41,8 @@
     ],
     "autoload": {
         "psr-4": {
-            "HenryAvila\\EmailTracking\\": "src",
-            "HenryAvila\\EmailTracking\\Database\\Factories\\": "database/factories"
+            "HenryAvila\\LaravelNovaEmailTracking\\": "src",
+            "HenryAvila\\LaravelNovaEmailTracking\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
@@ -64,10 +65,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "HenryAvila\\EmailTracking\\EmailTrackingServiceProvider"
+                "HenryAvila\\LaravelNovaEmailTracking\\LaravelNovaEmailTrackingServiceProvider"
             ],
             "aliases": {
-                "EmailTracking": "HenryAvila\\EmailTracking\\Facades\\EmailTracking"
+                "LaravelNovaEmailTracking": "HenryAvila\\LaravelNovaEmailTracking\\Facades\\LaravelNovaEmailTracking"
             }
         }
     },

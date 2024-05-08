@@ -85,14 +85,14 @@ On `NovaServiceProvider.php`, add the code:
      */
     public function tools()
     {
-        \HenryAvila\LaravelNovaEmailTracking\Nova\EmailTrackingTool::make()
+        \HenryAvila\LaravelNovaEmailTracking\Nova\LaravelNovaEmailTrackingTool::make()
     }
 ```
 
 This will display the e-mails on Laravel Nova Dashboard.
 
 If you need to customize the Nova Resource, just create a new one
-extendind `HenryAvila\LaravelNovaEmailTracking\Nova\EmailResource` and use this code
+extending `HenryAvila\LaravelNovaEmailTracking\Nova\EmailResource` and use this code
 
 ```php
     /**
@@ -102,7 +102,7 @@ extendind `HenryAvila\LaravelNovaEmailTracking\Nova\EmailResource` and use this 
      */
     public function tools()
     {                    
-        \HenryAvila\LaravelNovaEmailTracking\Nova\EmailTrackingTool::make()
+        \HenryAvila\LaravelNovaEmailTracking\Nova\LaravelNovaEmailTrackingTool::make()
             ->emailResource(CustomEmailResource::class)                        
     }                
 ```
@@ -234,7 +234,7 @@ public function fields(Request $request)
 {
     return [
         ...
-        \HenryAvila\LaravelNovaEmailTracking\EmailTracking::hasManyEmailsField(),
+        \HenryAvila\LaravelNovaEmailTracking\LaravelNovaEmailTracking::hasManyEmailsField(),
         ...
     ];
 }

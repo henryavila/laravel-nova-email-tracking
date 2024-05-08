@@ -1,8 +1,8 @@
 <?php
 
-namespace HenryAvila\EmailTracking\Database\Factories;
+namespace HenryAvila\LaravelNovaEmailTracking\Database\Factories;
 
-use HenryAvila\EmailTracking\Models\User;
+use HenryAvila\LaravelNovaEmailTracking\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 

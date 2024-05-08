@@ -1,18 +1,18 @@
 <?php
 
-namespace HenryAvila\EmailTracking;
+namespace HenryAvila\LaravelNovaEmailTracking;
 
-use HenryAvila\EmailTracking\Nova\EmailTrackingTool;
+use HenryAvila\LaravelNovaEmailTracking\Nova\LaravelNovaEmailTrackingTool;
 use Laravel\Nova\Fields\MorphMany;
 
-class EmailTracking
+class LaravelNovaEmailTracking
 {
     public static function hasManyEmailsField(string $label = null): MorphMany
     {
         return MorphMany::make(
             $label === null ? __('email-tracking::resources.emails') : $label,
             'emails',
-            EmailTrackingTool::$emailResource
+            LaravelNovaEmailTrackingTool::$emailResource
         );
     }
 }

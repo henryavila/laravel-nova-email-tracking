@@ -1,6 +1,6 @@
 <?php
 
-namespace HenryAvila\EmailTracking\Policies;
+namespace HenryAvila\LaravelNovaEmailTracking\Policies;
 
 use Illuminate\Auth\Access\HandlesAuthorization;
 

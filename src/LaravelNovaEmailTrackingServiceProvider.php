@@ -1,11 +1,11 @@
 <?php
 
-namespace HenryAvila\EmailTracking;
+namespace HenryAvila\LaravelNovaEmailTracking;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class EmailTrackingServiceProvider extends PackageServiceProvider
+class LaravelNovaEmailTrackingServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {

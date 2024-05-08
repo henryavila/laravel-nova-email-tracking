@@ -1,9 +1,9 @@
 <?php
 
-namespace HenryAvila\EmailTracking\Controllers;
+namespace HenryAvila\LaravelNovaEmailTracking\Controllers;
 
-use HenryAvila\EmailTracking\Middleware\Webhooks\MailgunWebhookMiddleware;
-use HenryAvila\EmailTracking\Models\Email;
+use HenryAvila\LaravelNovaEmailTracking\Middleware\Webhooks\MailgunWebhookMiddleware;
+use HenryAvila\LaravelNovaEmailTracking\Models\Email;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Log;

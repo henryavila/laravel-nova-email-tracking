@@ -1,6 +1,6 @@
 <?php
 
-namespace HenryAvila\EmailTracking\Models;
+namespace HenryAvila\LaravelNovaEmailTracking\Models;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;

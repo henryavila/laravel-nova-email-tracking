@@ -1,6 +1,6 @@
 <?php
 
-namespace HenryAvila\EmailTracking\Notifications;
+namespace HenryAvila\LaravelNovaEmailTracking\Notifications;
 
 use Illuminate\Notifications\Messages\MailMessage;
 

@@ -1,13 +1,13 @@
 <?php
 
-namespace HenryAvila\EmailTracking\Facades;
+namespace HenryAvila\LaravelNovaEmailTracking\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \HenryAvila\EmailTracking\EmailTracking
+ * @see \HenryAvila\LaravelNovaEmailTracking\LaravelNovaEmailTracking
  */
-class EmailTracking extends Facade
+class LaravelNovaEmailTracking extends Facade
 {
     protected static function getFacadeAccessor()
     {

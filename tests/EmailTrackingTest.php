@@ -1,10 +1,10 @@
 <?php
 
-use HenryAvila\EmailTracking\Listeners\LogEmailSentListener;
-use HenryAvila\EmailTracking\Mail\TrackableMail;
-use HenryAvila\EmailTracking\Models\Email;
-use HenryAvila\EmailTracking\Models\User;
-use HenryAvila\EmailTracking\Notifications\SampleNotification;
+use HenryAvila\LaravelNovaEmailTracking\Listeners\LogEmailSentListener;
+use HenryAvila\LaravelNovaEmailTracking\Mail\TrackableMail;
+use HenryAvila\LaravelNovaEmailTracking\Models\Email;
+use HenryAvila\LaravelNovaEmailTracking\Models\User;
+use HenryAvila\LaravelNovaEmailTracking\Notifications\SampleNotification;
 use Illuminate\Mail\Events\MessageSending;
 use Illuminate\Mail\Events\MessageSent;
 use Illuminate\Support\Facades\Event;

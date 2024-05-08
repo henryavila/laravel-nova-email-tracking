@@ -1,8 +1,8 @@
 <?php
 
-namespace HenryAvila\EmailTracking\Nova;
+namespace HenryAvila\LaravelNovaEmailTracking\Nova;
 
-use HenryAvila\EmailTracking\Models\Email;
+use HenryAvila\LaravelNovaEmailTracking\Models\Email;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Nova\Fields\Boolean;

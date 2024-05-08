@@ -1,6 +1,6 @@
 <?php
 
-namespace HenryAvila\EmailTracking\Notifications;
+namespace HenryAvila\LaravelNovaEmailTracking\Notifications;
 
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
@@ -19,7 +19,7 @@ class SampleNotification extends Notification
 
     public function toMail($notifiable): MailMessage
     {
-        return (new \HenryAvila\EmailTracking\Notifications\TrackableNotificationMailMessage($this->model))
+        return (new \HenryAvila\LaravelNovaEmailTracking\Notifications\TrackableNotificationMailMessage($this->model))
             ->subject('Sample Notification Test' . (now())->format('d/m/Y - h:i:s'))
             ->line('The introduction to the notification.')
             ->action('Notification Action', url('/'))

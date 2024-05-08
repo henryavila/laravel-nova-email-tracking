@@ -1,8 +1,8 @@
 <?php
 
-namespace HenryAvila\EmailTracking\Models;
+namespace HenryAvila\LaravelNovaEmailTracking\Models;
 
-use HenryAvila\EmailTracking\Traits\ModelWithEmailsSenderTrait;
+use HenryAvila\LaravelNovaEmailTracking\Traits\ModelWithEmailsSenderTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 

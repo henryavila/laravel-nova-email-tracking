@@ -1,6 +1,10 @@
 # Changelog
 
-All notable changes to `email-tracking` will be documented in this file.
+All notable changes to `laravel-nova-email-tracking` will be documented in this file.
+
+# 4.0.0 - 2024-05-08
+
+- Migrate from `henryavila/email-tracking` to `henryavila/laravel-nova-email-tracking`
 
 # 3.0.0 - 2023-08-10
 
