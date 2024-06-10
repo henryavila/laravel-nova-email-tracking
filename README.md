@@ -2,7 +2,7 @@ Rastreamento de e-mail Integrado ao Laravel Nova
 
 
 This is a fork of `henryavila/email-tracking` package. The original package droped support of Laravel Nova. This package was created to keep support for Laravel Nova.
-This package will not receite update, sice I moved from Laravel Nova to Filament
+This package will not receite update, since I moved from Laravel Nova to Filament
 
 ---
 
