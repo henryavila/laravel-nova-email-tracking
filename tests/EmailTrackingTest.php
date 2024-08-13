@@ -105,6 +105,7 @@ it('can send Custom Mail passing model data', function () {
 });
 
 it('create a email object on custom Mailable send', function () {
+    copyViewFiles();
     $user = User::factory()->create();
     Event::fake([
         MessageSending::class,
