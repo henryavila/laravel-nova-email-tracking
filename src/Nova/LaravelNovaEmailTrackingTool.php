@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 namespace HenryAvila\LaravelNovaEmailTracking\Nova;
 
-use HenryAvila\LaravelNovaEmailTracking\Models\Email;
-use HenryAvila\LaravelNovaEmailTracking\Policies\EmailPolicy;
+use HenryAvila\EmailTracking\Models\Email;
+use HenryAvila\EmailTracking\Policies\EmailPolicy;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
+use Laravel\Nova\Nova;
 
 class LaravelNovaEmailTrackingTool extends \Laravel\Nova\Tool
 {
@@ -22,7 +23,7 @@ class LaravelNovaEmailTrackingTool extends \Laravel\Nova\Tool
      */
     public function boot()
     {
-        \Laravel\Nova\Nova::resources([
+        Nova::resources([
             static::$emailResource,
         ]);
 
