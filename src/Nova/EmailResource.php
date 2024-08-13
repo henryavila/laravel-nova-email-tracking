@@ -1,8 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace HenryAvila\LaravelNovaEmailTracking\Nova;
 
-use HenryAvila\LaravelNovaEmailTracking\Models\Email;
+use HenryAvila\EmailTracking\Models\Email;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Nova\Fields\Boolean;
@@ -24,11 +26,11 @@ class EmailResource extends Resource
 {
     /**
      * The model the resource corresponds to.
-     *
-     * @var string
      */
-    public static $model = Email::class;
+    public static string $model = Email::class;
+
     public static $group = 'Logs';
+
     public static $globallySearchable = false;
 
     /**
@@ -38,7 +40,6 @@ class EmailResource extends Resource
      */
     public static $polling = true;
 
-
     /**
      * Indicates whether to show the polling toggle button inside Nova.
      *
@@ -46,16 +47,13 @@ class EmailResource extends Resource
      */
     public static $showPollingToggle = true;
 
-    public static function getModel()
+    public static function getModel(): string
     {
         return Email::class;
     }
 
     /**
      * Determine if this resource is available for navigation.
-     *
-     * @param Request $request
-     * @return bool
      */
     public static function availableForNavigation(Request $request): bool
     {
@@ -85,14 +83,11 @@ class EmailResource extends Resource
      * @var array
      */
     public static $search = [
-        'message_id', 'subject', 'to', 'cc', 'bcc', 'reply_to',
+        'id', 'message_id', 'subject', 'to', 'cc', 'bcc', 'reply_to',
     ];
 
     /**
      * Get the fields displayed by the resource.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @return array
      */
     public function fields(Request $request): array
     {
@@ -170,7 +165,6 @@ class EmailResource extends Resource
     /**
      * Get the cards available for the request.
      *
-     * @param \Illuminate\Http\Request $request
      * @return array
      */
     public function cards(Request $request)
@@ -181,7 +175,6 @@ class EmailResource extends Resource
     /**
      * Get the filters available for the resource.
      *
-     * @param \Illuminate\Http\Request $request
      * @return array
      */
     public function filters(Request $request)
@@ -192,7 +185,6 @@ class EmailResource extends Resource
     /**
      * Get the lenses available for the resource.
      *
-     * @param \Illuminate\Http\Request $request
      * @return array
      */
     public function lenses(Request $request)
@@ -203,7 +195,6 @@ class EmailResource extends Resource
     /**
      * Get the actions available for the resource.
      *
-     * @param \Illuminate\Http\Request $request
      * @return array
      */
     public function actions(Request $request)

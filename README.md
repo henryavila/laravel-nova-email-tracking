@@ -31,14 +31,14 @@ composer require henryavila/laravel-nova-email-tracking
 Publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --tag="laravel-nova-email-tracking-migrations"
+php artisan vendor:publish --tag="email-tracking-migrations"
 php artisan migrate
 ```
 
 Publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag="laravel-nova-email-tracking-config"
+php artisan vendor:publish --tag="email-tracking-config"
 ```
 
 This is the contents of the published config file:
