@@ -7,6 +7,7 @@ namespace HenryAvila\LaravelNovaEmailTracking\Nova;
 use HenryAvila\EmailTracking\Models\Email;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Str;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\ID;
@@ -117,11 +118,10 @@ class EmailResource extends Resource
 
                 DateTime::make(__('email-tracking::resources.failed_at'), 'failed_at'),
 
-                Text::make(__('email-tracking::resources.status'), function ($email) {
-                    $array = explode('||', $email->delivery_status_message);
-
-                    return implode('<br /><br />', $array);
-                })->asHtml(),
+                Text::make(__('email-tracking::resources.status'), fn ($email) => Str::of($email->delivery_status_message)
+                    ->explode('||')
+                    ->implode('<br /><br />')
+                )->asHtml(),
 
                 Number::make(__('email-tracking::resources.delivery_status_attempts'), 'delivery_status_attempts'),
                 Number::make(__('email-tracking::resources.opened'), 'opened'),
