@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests;
 
 use HenryAvila\LaravelNovaEmailTracking\LaravelNovaEmailTrackingServiceProvider;
@@ -13,7 +15,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'HenryAvila\\LaravelNovaEmailTracking\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
+            fn (string $modelName) => 'HenryAvila\\LaravelNovaEmailTracking\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 
@@ -27,16 +29,10 @@ class TestCase extends Orchestra
     public function getEnvironmentSetUp($app)
     {
         config()->set('services.mailgun.secret', 'key-9999999999999999999999999');
-
-
-        $migration = include __DIR__.'/../database/migrations/create_emails_table.php.stub';
-        $migration->up();
     }
 
     /**
      * Define database migrations.
-     *
-     * @return void
      */
     protected function defineDatabaseMigrations(): void
     {
