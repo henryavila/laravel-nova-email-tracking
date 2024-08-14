@@ -16,7 +16,7 @@
     ],
     "require": {
         "php": "^8.1.0",
-        "henryavila/email-tracking": "^5.1.0",
+        "henryavila/email-tracking": "^5.1.1",
         "spatie/laravel-package-tools": "^1.9.2",
         "illuminate/contracts": "^9.0|^10.0|^11.0",
         "spatie/laravel-permission": "^3.0|^4.0|^5.0|^6.0"
@@ -25,7 +25,7 @@
         "laravel/nova": "^3.0|4.33.3",
         "laravel/pint": "^1.17",
         "nunomaduro/collision": "^6.0|^7.0|^8.1",
-        "nunomaduro/larastan": "^2.0.1",
+        "larastan/larastan": "^v2.9.8",
         "orchestra/testbench": "^7.0|^8.0|^9.0",
         "pestphp/pest": "^v2.13.0",
         "pestphp/pest-plugin-laravel": "^v2.3.0",
