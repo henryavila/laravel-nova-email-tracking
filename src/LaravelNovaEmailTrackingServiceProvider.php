@@ -17,7 +17,7 @@ class LaravelNovaEmailTrackingServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('laravel-nova-email-tracking')
+            ->name('email-tracking')
             ->hasTranslations();
     }
 }

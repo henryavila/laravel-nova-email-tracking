@@ -63,12 +63,12 @@ class EmailResource extends Resource
 
     public static function label()
     {
-        return __('laravel-nova-email-tracking::resources.emails');
+        return __('email-tracking::resources.emails');
     }
 
     public static function singularLabel()
     {
-        return __('laravel-nova-email-tracking::resources.email');
+        return __('email-tracking::resources.email');
     }
 
     /**
@@ -93,46 +93,46 @@ class EmailResource extends Resource
     public function fields(Request $request): array
     {
         return [
-            ID::make(__('laravel-nova-email-tracking::resources.model_id'), 'id'),
-            Text::make(__('laravel-nova-email-tracking::resources.message_id'), 'message_id'),
+            ID::make(__('email-tracking::resources.model_id'), 'id'),
+            Text::make(__('email-tracking::resources.message_id'), 'message_id'),
 
-            DateTime::make(__('laravel-nova-email-tracking::resources.created_at'), 'created_at'),
+            DateTime::make(__('email-tracking::resources.created_at'), 'created_at'),
 
-            DateTime::make(__('laravel-nova-email-tracking::resources.updated_at'), 'updated_at'),
+            DateTime::make(__('email-tracking::resources.updated_at'), 'updated_at'),
 
             MorphTo::make('sender')->searchable(),
 
-            Panel::make(__('laravel-nova-email-tracking::resources.email'), [
-                Text::make(__('laravel-nova-email-tracking::resources.subject'), 'subject'),
-                Text::make(__('laravel-nova-email-tracking::resources.mail_to'), 'to'),
-                Text::make(__('laravel-nova-email-tracking::resources.mail_cc'), 'cc'),
-                Text::make(__('laravel-nova-email-tracking::resources.mail_bcc'), 'bcc'),
-                Text::make(__('laravel-nova-email-tracking::resources.mail_reply_to'), 'reply_to'),
+            Panel::make(__('email-tracking::resources.email'), [
+                Text::make(__('email-tracking::resources.subject'), 'subject'),
+                Text::make(__('email-tracking::resources.mail_to'), 'to'),
+                Text::make(__('email-tracking::resources.mail_cc'), 'cc'),
+                Text::make(__('email-tracking::resources.mail_bcc'), 'bcc'),
+                Text::make(__('email-tracking::resources.mail_reply_to'), 'reply_to'),
 
                 Trix::make('Conteúdo', 'body_html')->canSee(fn () => config('email-tracking.log-body-html')),
                 Textarea::make('Conteúdo Simplificado', 'body_txt')->canSee(fn () => config('email-tracking.log-body-txt')),
             ]),
 
-            Panel::make(__('laravel-nova-email-tracking::resources.statistics'), [
-                DateTime::make(__('laravel-nova-email-tracking::resources.delivered_at'), 'delivered_at'),
+            Panel::make(__('email-tracking::resources.statistics'), [
+                DateTime::make(__('email-tracking::resources.delivered_at'), 'delivered_at'),
 
-                DateTime::make(__('laravel-nova-email-tracking::resources.failed_at'), 'failed_at'),
+                DateTime::make(__('email-tracking::resources.failed_at'), 'failed_at'),
 
-                Text::make(__('laravel-nova-email-tracking::resources.status'), fn ($email) => Str::of($email->delivery_status_message)
+                Text::make(__('email-tracking::resources.status'), fn ($email) => Str::of($email->delivery_status_message)
                     ->explode('||')
                     ->implode('<br /><br />')
                 )->asHtml(),
 
-                Number::make(__('laravel-nova-email-tracking::resources.delivery_status_attempts'), 'delivery_status_attempts'),
-                Number::make(__('laravel-nova-email-tracking::resources.opened'), 'opened'),
+                Number::make(__('email-tracking::resources.delivery_status_attempts'), 'delivery_status_attempts'),
+                Number::make(__('email-tracking::resources.opened'), 'opened'),
 
-                DateTime::make(__('laravel-nova-email-tracking::resources.first_opened_at'), 'first_opened_at'),
-                DateTime::make(__('laravel-nova-email-tracking::resources.last_opened_at'), 'last_opened_at'),
+                DateTime::make(__('email-tracking::resources.first_opened_at'), 'first_opened_at'),
+                DateTime::make(__('email-tracking::resources.last_opened_at'), 'last_opened_at'),
 
-                Number::make(__('laravel-nova-email-tracking::resources.clicked'), 'clicked'),
+                Number::make(__('email-tracking::resources.clicked'), 'clicked'),
 
-                DateTime::make(__('laravel-nova-email-tracking::resources.first_clicked_at'), 'first_clicked_at'),
-                DateTime::make(__('laravel-nova-email-tracking::resources.last_clicked_at'), 'last_clicked_at'),
+                DateTime::make(__('email-tracking::resources.first_clicked_at'), 'first_clicked_at'),
+                DateTime::make(__('email-tracking::resources.last_clicked_at'), 'last_clicked_at'),
 
             ]),
         ];
@@ -144,19 +144,19 @@ class EmailResource extends Resource
 
             ID::make()->sortable(),
 
-            DateTime::make(__('laravel-nova-email-tracking::resources.created_at'), 'created_at')->sortable(),
+            DateTime::make(__('email-tracking::resources.created_at'), 'created_at')->sortable(),
 
             MorphTo::make('sender')->searchable(),
 
-            Text::make(__('laravel-nova-email-tracking::resources.subject'), 'subject')->sortable(),
-            Text::make(__('laravel-nova-email-tracking::resources.mail_to'), 'to')->sortable(),
+            Text::make(__('email-tracking::resources.subject'), 'subject')->sortable(),
+            Text::make(__('email-tracking::resources.mail_to'), 'to')->sortable(),
 
-            Number::make(__('laravel-nova-email-tracking::resources.delivered'), fn () => null)
+            Number::make(__('email-tracking::resources.delivered'), fn () => null)
                 ->textAlign('center')
                 ->canSee(fn () => empty($this->model()->delivered_at) && empty($this->model()->failed_at)),
 
             //delivered_at or failed_at are defined
-            Boolean::make(__('laravel-nova-email-tracking::resources.delivered'), fn () => isset($this->model()->delivered_at))
+            Boolean::make(__('email-tracking::resources.delivered'), fn () => isset($this->model()->delivered_at))
                 ->canSee(fn () => ! empty($this->model()->delivered_at) || ! empty($this->model()->failed_at)),
 
         ];

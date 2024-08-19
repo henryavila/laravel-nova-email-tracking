@@ -12,7 +12,7 @@ class LaravelNovaEmailTracking
     public static function hasManyEmailsField(?string $label = null): MorphMany
     {
         return MorphMany::make(
-            $label === null ? __('laravel-nova-email-tracking::resources.emails') : $label,
+            $label === null ? __('email-tracking::resources.emails') : $label,
             'emails',
             LaravelNovaEmailTrackingTool::$emailResource
         );
