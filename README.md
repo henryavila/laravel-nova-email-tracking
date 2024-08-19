@@ -62,13 +62,13 @@ return [
     'log-body-txt' => true,
 ];
 
-``
+```
 
 
 Publish the lang files (optional) with:
 
 ```bash
-php artisan vendor:publish --tag="laravel-nova-email-tracking-translations"
+php artisan vendor:publish --tag="email-tracking-translations"
 ```
 
 ---
