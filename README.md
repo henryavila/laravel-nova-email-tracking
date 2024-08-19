@@ -62,7 +62,7 @@ return [
     'log-body-txt' => true,
 ];
 
-``
+```
 
 
 Publish the lang files (optional) with:
