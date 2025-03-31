@@ -15,8 +15,8 @@
         }
     ],
     "require": {
-        "php": "^8.1.0",
-        "henryavila/email-tracking": "dev-dispatch-event-on-webhook-interseption",
+        "php": "^8.2.0",
+        "henryavila/email-tracking": "^6.0.0",
         "spatie/laravel-package-tools": "^1.9.2",
         "illuminate/contracts": "^9.0|^10.0|^11.0|^12.0",
         "spatie/laravel-permission": "^3.0|^4.0|^5.0|^6.0"
