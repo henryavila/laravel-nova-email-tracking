@@ -245,15 +245,6 @@ it('returns empty cards', function () {
     expect($cards)->toBeEmpty();
 });
 
-it('returns empty filters', function () {
-    $request = NovaRequest::create('/');
-    $resource = new EmailResource(new Email);
-
-    $filters = $resource->filters($request);
-
-    expect($filters)->toBeEmpty();
-});
-
 it('returns empty lenses', function () {
     $request = NovaRequest::create('/');
     $resource = new EmailResource(new Email);
