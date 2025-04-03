@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Str;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\DateTime;
+use Laravel\Nova\Fields\Filters\SelectFilter;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\MorphTo;
 use Laravel\Nova\Fields\Number;
@@ -179,7 +180,9 @@ class EmailResource extends Resource
      */
     public function filters(Request $request)
     {
-        return [];
+        return [
+            SelectFilter::make()
+        ];
     }
 
     /**
